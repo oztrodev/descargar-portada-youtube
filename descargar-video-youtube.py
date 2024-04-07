@@ -19,9 +19,23 @@ def download_video(url):
     with open(f"{title}_thumbnail.jpg", "wb") as file:
         file.write(thumbnail_data)
     
-    print("El video y la imagen de portada han sido descargados correctamente.")
+    print(f"El video '{title}' y la imagen de portada han sido descargados correctamente.")
 
-# URL del video de YouTube
-url = "https://www.youtube.com/watch?v=M7v2jXR-Jlk"
+# Lista de URLs de videos de YouTube
+urls = [
+    "https://www.youtube.com/watch?v=LfwVGlW237o",
+    "https://www.youtube.com/watch?v=7-v3ckbGSrM",
+    "https://www.youtube.com/watch?v=oM2o_OY3mAk",
+    "https://www.youtube.com/watch?v=vsAJHkv3Iys",
+    "https://www.youtube.com/watch?v=s1URBn3PQTI",
+    "https://www.youtube.com/watch?v=lFyxExUoAJY",
+    "https://www.youtube.com/watch?v=LpTdmXOfORs",
+    "https://www.youtube.com/watch?v=8pfkcG9dSEE",
+    "https://www.youtube.com/watch?v=-r687V8yqKY",
+    "https://www.youtube.com/watch?v=ygA84G7aVPg",
+    "https://www.youtube.com/watch?v=L50Ie4CxOCk",
+]
 
-download_video(url)
+# Procesar cada URL
+for url in urls:
+    download_video(url)
